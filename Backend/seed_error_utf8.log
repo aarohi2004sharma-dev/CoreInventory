@@ -1,0 +1,301 @@
+﻿..\.venv\Scripts\python
+.exe : Traceback (most 
+recent call last):
+At line:1 char:1
++ ..\.venv\Scripts\pyth
+on.exe seed.py 2> 
+seed_error.log ; cat 
+seed_erro ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Traceback (mo   
+ st recent call las    
+t)::String) [], Re    
+moteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\engine\base.py",
+ line 2125, in _exec_in
+sertmany_context
+    dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\engine\default.p
+y", line 952, in 
+do_execute
+    cursor.execute(stat
+ement, parameters)
+    ~~~~~~~~~~~~~~^^^^^
+^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError:
+ NOT NULL constraint 
+failed: 
+categories.user_id
+
+The above exception 
+was the direct cause 
+of the following 
+exception:
+
+Traceback (most recent 
+call last):
+  File "C:\Users\Nano C
+ore\CoreInventory\backe
+nd\seed.py", line 54, 
+in <module>
+    seed_db()
+    ~~~~~~~^^
+  File "C:\Users\Nano C
+ore\CoreInventory\backe
+nd\seed.py", line 24, 
+in seed_db
+    db.session.flush()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\orm\scoping.py",
+ line 924, in flush
+    return self._proxie
+d.flush(objects=objects
+)
+           ~~~~~~~~~~~~
+~~~~~~~^^^^^^^^^^^^^^^^
+^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\orm\session.py",
+ line 4331, in flush
+    
+self._flush(objects)
+    
+~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\orm\session.py",
+ line 4466, in _flush
+    with 
+util.safe_reraise():
+         
+~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\util\langhelpers
+.py", line 121, in 
+__exit__
+    raise exc_value.wit
+h_traceback(exc_tb)
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\orm\session.py",
+ line 4427, in _flush
+    
+flush_context.execute()
+    
+~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\orm\unitofwork.p
+y", line 466, in 
+execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\orm\unitofwork.p
+y", line 642, in 
+execute
+    util.preloaded.orm_
+persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_
+mapper_hierarchy(self.m
+apper, False, False),
+        ^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\orm\persistence.
+py", line 93, in 
+save_obj
+    _emit_insert_statem
+ents(
+    ~~~~~~~~~~~~~~~~~~~
+~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\orm\persistence.
+py", line 1143, in 
+_emit_insert_statements
+    result = 
+connection.execute(
+        statement, 
+multiparams, execution_
+options=execution_optio
+ns
+    )
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\engine\base.py",
+ line 1419, in execute
+    return meth(
+        self,
+        
+distilled_parameters,
+        
+execution_options or 
+NO_OPTIONS,
+    )
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\sql\elements.py"
+, line 527, in 
+_execute_on_connection
+    return connection._
+execute_clauseelement(
+           ~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~^
+        self, 
+distilled_params, 
+execution_options
+        ^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^
+    )
+    ^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\engine\base.py",
+ line 1641, in 
+_execute_clauseelement
+    ret = 
+self._execute_context(
+        dialect,
+    ...<8 lines>...
+        
+cache_hit=cache_hit,
+    )
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\engine\base.py",
+ line 1844, in 
+_execute_context
+    return self._exec_i
+nsertmany_context(diale
+ct, context)
+           ~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~^^^^^^
+^^^^^^^^^^^^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\engine\base.py",
+ line 2133, in _exec_in
+sertmany_context
+    self._handle_dbapi_
+exception(
+    ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~^
+        e,
+        ^^
+    ...<4 lines>...
+        
+is_sub_exec=True,
+        
+^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\engine\base.py",
+ line 2363, in 
+_handle_dbapi_exception
+    raise sqlalchemy_ex
+ception.with_traceback(
+exc_info[2]) from e
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\engine\base.py",
+ line 2125, in _exec_in
+sertmany_context
+    dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nano C
+ore\CoreInventory\.venv
+\Lib\site-packages\sqla
+lchemy\engine\default.p
+y", line 952, in 
+do_execute
+    cursor.execute(stat
+ement, parameters)
+    ~~~~~~~~~~~~~~^^^^^
+^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.Integrit
+yError: (sqlite3.Integr
+ityError) NOT NULL 
+constraint failed: 
+categories.user_id
+[SQL: INSERT INTO 
+categories (user_id, 
+name, description) 
+VALUES (?, ?, ?) 
+RETURNING id]
+[parameters: (None, 
+'Electronics', 
+'Gadgets and devices')]
+(Background on this 
+error at: https://sqlal
+che.me/e/20/gkpj)
